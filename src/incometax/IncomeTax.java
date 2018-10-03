@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Karl Butler
+ *10/03/2018
+ *to calculate IncomeTax
  */
 
 package incometax;
@@ -17,10 +17,11 @@ public class IncomeTax {
      */
     public static void main(String[] args) {
      Scanner keyInput = new Scanner(System.in);
-     
+     //declaring variables
      double sal,taxL1,taxL2,taxL3,taxL4,taxL5,tax1,tax2,tax3,tax4,tax5,tax;
      
     System.out.println("pleas enter your yearly salary");
+   //giving variables values
     sal = keyInput.nextDouble();
     
     taxL1= 46605;
@@ -36,6 +37,12 @@ public class IncomeTax {
     tax5=0.33;
     
     tax=0;
+    
+    //the magic of the program
+    if(sal>=taxL5){
+    tax=sal*tax5;
+    }
+    
     if(sal<=taxL4){
     tax=sal*tax4;
     if(sal<=taxL3){
